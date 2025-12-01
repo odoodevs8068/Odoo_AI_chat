@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="odoo_ai_chat_settings_view" model="ir.ui.view">
+        <field name="name">odoo_ai_chat_settings_view_inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/app/block[@name='integration']" position="after">
+                <div class="app_settings_block" data-string="AI" string="AI" data-key="odoo_ai_chat">
+                    <h2>Odoo AI</h2>
+                    <div class="col-xs-12 row o_settings_container o_chatgpt_chatgpt_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">AI Type</span>
+                                <div class="content-group mt16">
+                                    <field name="ai_type"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box" invisible="ai_type != 'gemini_ai'">
+                            <div class="o_setting_right_pane border-start-0">
+                                <div class="content-group">
+                                    <div class="row mt8">
+                                        <label class="col-lg-3" string="Gemini Model" for="gemini_model"/>
+                                        <field name="gemini_model" title="Gemini Model" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_setting_right_pane border-start-0">
+                                <div class="content-group">
+                                    <div class="row mt8">
+                                        <label class="col-lg-3" string="API Key" for="gemini_api_key"/>
+                                        <field name="gemini_api_key" title="Gemini API Key" password="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

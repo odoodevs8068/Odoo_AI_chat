@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+</head>
+
+<body style="    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2c3e50;">
+
+    <div class="container" style="width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+
+   <h1 style=" color: #2d5be3;
+    border-bottom: 3px solid #2d5be3;
+    padding-bottom: 10px;"><i class="fa fa-check" style="font-size:38px;color:green"></i>Odoo AI Chat – Overview</h1>
+        <p>
+            Odoo AI Chat is a smart assistant integrated directly inside Odoo Discuss.
+            It allows users to ask questions and get instant AI-powered responses without leaving Odoo.
+        </p>
+        <p>
+            You can switch between <b>Odoo AI</b> and <b>Google Gemini AI</b> easily from the settings.
+            This module automatically replies to user messages in chat channels using Artificial Intelligence,
+            making your Odoo system more interactive, helpful, and intelligent.
+        </p>
+
+        <h2 style="    margin-top: 35px;
+    color: #34495e;"><img src="./assets/screenshots/9581351.png" style="height: 40px;" class="img-fluid mb-3" > How It Works (Simple Explanation)</h2>
+        <ul>
+            <li>A user sends a message in the Odoo AI chat channel or mentions Odoo AI in any chat.</li>
+            <li>The system detects the message automatically.</li>
+            <li>Based on your configuration:</li>
+            <ul>
+                <li>It sends the question to Odoo AI, or</li>
+                <li>It sends the question to Google Gemini AI.</li>
+            </ul>
+            <li>The AI generates a response.</li>
+            <li>The response is posted back into the chat instantly by the Odoo AI user.</li>
+            <li>All of this happens automatically in the background without any manual action.</li>
+        </ul>
+
+         <h2 style="    margin-top: 35px;
+    color: #34495e;"><img src="./assets/screenshots/roc.png" style="height: 40px;" class="img-fluid mb-3" > Usage – How to Use It</h2>
+        <ol>
+            <li>Install the Odoo AI Chat module.</li>
+            <li>Go to <b>Settings → AI Configuration</b>.</li>
+            <li>Select:
+                <ul>
+                    <li>Odoo AI or Gemini AI</li>
+                </ul>
+            </li>
+            <li>If using Gemini:
+                <ul>
+                    <li>Enter your Gemini API Key</li>
+                    <li>Select the Gemini Model</li>
+                </ul>
+            </li>
+            <li>Save the settings.</li>
+            <li>Open the <b>Odoo AI</b> chat channel in Discuss.</li>
+            <li>Start typing your question.</li>
+            <li>The AI will reply automatically.</li>
+            <li>You can also mention <b>Odoo AI</b> in private chats to trigger the bot.</li>
+        </ol>
+
+         <h2 style="    margin-top: 35px;
+    color: #34495e;"><img src="./assets/screenshots/pngegg.png" style="height: 40px;" class="img-fluid mb-3" > Key Benefits</h2>
+        <ul class="benefits">
+            <li><i class="fa fa-check" style="font-size:28px;color:green"></i> Fully integrated inside Odoo Discuss</li>
+            <li><i class="fa fa-check" style="font-size:28px;color:green"></i> Real-time AI responses</li>
+            <li><i class="fa fa-check" style="font-size:28px;color:green"></i> Supports both Odoo AI and Google Gemini AI</li>
+            <li><i class="fa fa-check" style="font-size:28px;color:green"></i> No external website needed</li>
+            <li><i class="fa fa-check" style="font-size:28px;color:green"></i> Easy configuration from Odoo settings</li>
+            <li><i class="fa fa-check" style="font-size:28px;color:green"></i> Improves productivity and user support</li>
+            <li><i class="fa fa-check" style="font-size:28px;color:green"></i> Works for all users with access to the channel</li>
+        </ul>
+
+         <h2 style="    margin-top: 35px;
+    color: #34495e;"><i class="fa fa-refresh" aria-hidden="true" style="font-size:25px;color:#606095"></i> Complete Flow Steps (Behind the Scenes)</h2>
+        <ol>
+            <li>User sends a message in chat.</li>
+            <li>Odoo triggers <b>_notify_thread</b>.</li>
+            <li>The system checks:
+                <ul>
+                    <li>Who sent the message</li>
+                    <li>Which channel it belongs to</li>
+                </ul>
+            </li>
+            <li>It reads the selected AI Type from settings.</li>
+            <li>If AI Type is:
+                <ul>
+                    <li>Odoo AI → Sends request to Odoo AI API</li>
+                    <li>Gemini AI → Sends request to Gemini API</li>
+                </ul>
+            </li>
+            <li>AI generates the response.</li>
+            <li>Response is posted back as Odoo AI user.</li>
+            <li>User receives the answer instantly.</li>
+        </ol>
+
+         <h2 style="    margin-top: 35px;
+    color: #34495e;">🔐 Security & Control</h2>
+        <ul>
+            <li>API keys are stored securely in System Parameters</li>
+            <li>Only selected AI service is used</li>
+            <li>Admin can change AI model anytime</li>
+            <li>No manual intervention required</li>
+        </ul>
+        <h2 style="margin-top: 35px; color: #34495e;">ScreenShots</h2>
+         <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                <img src="./assets/screenshots/ai_c_1.png" class="img-fluid mb-3" >
+                <img src="./assets/screenshots/AI_C_5.png" class="img-fluid mb-3" >
+                <img src="./assets/screenshots/ai_c_2.png" class="img-fluid mb-3" >
+                <img src="./assets/screenshots/ai_c_3.png" class="img-fluid mb-3" >
+                <img src="./assets/screenshots/GEMINI_AI_1.png" class="img-fluid mb-3" >
+         </ul>
+    </div>
+
+
+  <!-- Services -->
+    <section class="text-center my-5">
+    <h2 style="color:#222;">Our Odoo Services</h2>
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/cogs.png" width="48" height="48" class="mx-auto mb-3" alt="Customization">
+          <h6>Customization</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/wrench.png" width="48" height="48" class="mx-auto mb-3" alt="Implementation">
+          <h6>Implementation</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/lifebuoy.png" width="48" height="48" class="mx-auto mb-3" alt="Support">
+          <h6>Support</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/puzzle.png" width="48" height="48" class="mx-auto mb-3" alt="Integration">
+          <h6>Integration</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+    <section class="text-center my-5">
+    <h2 style="color:#222;">Related Products</h2>
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/18.0/custom_model_access_management" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/access_model.png" class="card-img-top" alt="Access Management">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Access Management - Model/User Wise</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/16.0/hotel_reservation_dashboard" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/hb.gif" class="card-img-top" alt="Hotel Dashboard">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Hotel Reservation Dashboard</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/15.0/print_wizard" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/bdr.png" class="card-img-top" alt="Big Data Reports">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Big Data Reports</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/17.0/message_gateway" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/mssge_gty.gif" class="card-img-top" alt="Message Gateway">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Message Gateway (Twilio, Nexmo…)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+    <section class="text-center my-5">
+        <h2 style="color:#222;">Need Help?</h2>
+        <div class="d-flex flex-column align-items-center mt-4">
+          <a href="mailto:odoodevs8068@gmail.com" class="btn btn-dark mb-2" style="width:250px;">
+            <i class="fa fa-envelope mr-2"></i>Email Us
+          </a>
+          <a href="https://wa.me/966542273082" class="btn btn-success mb-2" style="width:250px;">
+            <i class="fa fa-whatsapp mr-2"></i>WhatsApp (KSA) 966 54227 3082
+          </a>
+          <a href="https://wa.me/919360353170" class="btn btn-success" style="width:250px;">
+            <i class="fa fa-whatsapp mr-2"></i>WhatsApp (India) 91 9360353170
+          </a>
+        </div>
+    </section>
+
+</body>
+</html>

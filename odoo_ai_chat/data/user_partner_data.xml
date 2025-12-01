@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="partner_chatgpt" model="res.partner">
+            <field name="name">Odoo AI</field>
+            <field name="image_1920" type="base64" file="odoo_ai_chat/static/description/gemin.png"/>
+        </record>
+
+        <record id="user_chatgpt" model="res.users">
+            <field name="login">Odoo AI</field>
+            <field name="password">odooai</field>
+            <field name="partner_id" ref="odoo_ai_chat.partner_chatgpt"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[Command.link(ref('base.main_company'))]"/>
+            <field name="groups_id" eval="[Command.link(ref('base.group_user'))]"/>
+        </record>
+
+    </data>
+</odoo>
